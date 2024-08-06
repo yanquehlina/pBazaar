@@ -1,0 +1,3 @@
+# P-BAZAAR
+
+P-Bazzar is a web application designed as an ecommerce platform aimed at the Poultry industry. This platform enables poultry farmers, suppliers of poultry feeds and logistics, and consumers to connect, facilitating the sale and purchase of poultry products. The platform is designed to reduce postharvest loss and mitigate exploitation by sellers create ease in search of poultry products.
