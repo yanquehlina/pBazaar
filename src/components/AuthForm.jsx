@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Eye, EyeOff } from 'lucide-react';
-import Loader from './Loader'; // Assuming Loader is a separate component
+import { apiLogin, apiSignUp } from '../services/auth';
+
 
 const AuthForm = ({ isSignup }) => {
   const { register, handleSubmit, formState: { errors }, watch } = useForm();
@@ -11,9 +12,16 @@ const AuthForm = ({ isSignup }) => {
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
   const toggleConfirmPasswordVisibility = () => setShowConfirmPassword(!showConfirmPassword);
   
-  const onSubmit = data => {
+  const onSubmit = async data => {
     console.log(data);
-    // Handle form submission logic here
+    if (isSignup) {
+      const res = await apiSignUp(data);
+      console.log(res.data);
+    } else {
+      const res = await apiLogin(data);
+      console.log("Response:", res.data);
+    }
+   
   };
 
   return (
@@ -49,55 +57,40 @@ const AuthForm = ({ isSignup }) => {
         {isSignup && (
           <>
             <div className="space-y-2">
-              <label className="block text-base text-[#34495E]" htmlFor="fullName" style={{ fontFamily: 'Open Sans' }}>Full Name</label>
+              <label className="block text-base text-[#34495E]" htmlFor="fullName" style={{ fontFamily: 'Open Sans' }}>Name</label>
               <input
                 type="text"
-                id="fullName"
-                name="fullName"
-                placeholder="Enter your full name"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
                 className="border-2 p-2 rounded-md w-full"
                 style={{ fontFamily: 'Open Sans' }}
-                {...register("fullName", { required: "Full name is required" })}
+                {...register("name", { required: "Name is required" })}
               />
-              {errors.fullName && (
-                <p className="text-red-500" style={{ fontFamily: 'Open Sans' }}>{errors.fullName.message}</p>
+              {errors.name && (
+                <p className="text-red-500" style={{ fontFamily: 'Open Sans' }}>{errors.name.message}</p>
               )}
             </div>
 
             <div className="space-y-2">
-              <label className="block text-base text-[#34495E]" htmlFor="phone" style={{ fontFamily: 'Open Sans' }}>Phone Number</label>
+              <label className="block text-base text-[#34495E]" htmlFor="phone" style={{ fontFamily: 'Open Sans' }}>Username</label>
               <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Enter your phone number"
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your username"
                 className="border-2 p-2 rounded-md w-full"
                 style={{ fontFamily: 'Open Sans' }}
-                {...register("phone", { 
-                  required: "Phone number is required", 
-                  pattern: {
-                    value: /^(\+?\d{1,3}[- ]?)?\d{10,14}$/,
-                    message: 'Invalid phone number',
-                  },
+                {...register("username", { 
+                  required: "Username is required", 
                 })}
               />
-              {errors.phone && (
-                <p className="text-red-500" style={{ fontFamily: 'Open Sans' }}>{errors.phone.message}</p>
+              {errors.username && (
+                <p className="text-red-500" style={{ fontFamily: 'Open Sans' }}>{errors.username.message}</p>
               )}
             </div>
 
-            <div className="space-y-2">
-              <label className="block text-base text-[#34495E]" htmlFor="profession" style={{ fontFamily: 'Open Sans' }}>Professional Activity (Optional)</label>
-              <input
-                type="text"
-                id="profession"
-                name="profession"
-                placeholder="Enter your profession"
-                className="border-2 p-2 rounded-md w-full"
-                style={{ fontFamily: 'Open Sans' }}
-                {...register("profession")}
-              />
-            </div>
+          
           </>
         )}
 
@@ -160,7 +153,7 @@ const AuthForm = ({ isSignup }) => {
 
         <div className="flex gap-x-4 justify-end items-center">
           <button type="button" className="px-4 py-2 border rounded-full">
-            {isSignup ? 'Back' : <Link to="/signup">Back</Link>}
+            {isSignup ? 'Back' : <Link to="/">Back</Link>}
           </button>
           <button type="submit" className="px-4 py-2 bg-[#E74C3C] text-white rounded-full" style={{ fontFamily: 'Open Sans' }}>
             {isSignup ? 'Continue' : 'Login'}

@@ -1,9 +1,20 @@
-import React from 'react'
+import CTASection from "../components/CallAction";
+import FeaturesSection from "../components/Features";
+import Footer from "../components/Footer";
+import HeroSection from "../components/HeroSection";
+import Navbar from "../components/Navbar";
 
-const Landing = () => {
+
+const LandingPage = () => {
   return (
-    <div>Landing</div>
-  )
-}
+    <>
+      <Navbar />
+      <HeroSection />
+      <FeaturesSection />
+      <CTASection />
+      <Footer />
+    </>
+  );
+};
 
-export default Landing
+export default LandingPage;
