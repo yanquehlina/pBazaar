@@ -1,0 +1,164 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "imageUrl": "./images/pbazaar-egg.png",
+            "name": "Brown Egg",
+            "price": 80,
+            "stockQuantity": 50,
+            "description": "Fresh brown eggs, organic and farm-raised."
+        },
+        {
+            "id": 2,
+            "imageUrl": null,
+            "name": "Broiler Chicken",
+            "price": 150,
+            "stockQuantity": 30,
+            "description": "High-quality broiler chicken, ideal for grilling."
+        },
+        {
+            "id": 3,
+            "imageUrl": null,
+            "name": "Free-Range Chicken",
+            "price": 200,
+            "stockQuantity": 20,
+            "description": "Free-range chicken, raised without antibiotics."
+        },
+        {
+            "id": 4,
+            "imageUrl": null,
+            "name": "Chicken Wings",
+            "price": 100,
+            "stockQuantity": 40,
+            "description": "Pack of 10 chicken wings, perfect for frying."
+        },
+        {
+            "id": 5,
+            "imageUrl": null,
+            "name": "Chicken Breast",
+            "price": 180,
+            "stockQuantity": 25,
+            "description": "Boneless, skinless chicken breast, tender and juicy."
+        },
+        {
+            "id": 6,
+            "imageUrl": null,
+            "name": "Whole Turkey",
+            "price": 300,
+            "stockQuantity": 10,
+            "description": "Large whole turkey, perfect for holiday feasts."
+        },
+        {
+            "id": 7,
+            "imageUrl": null,
+            "name": "Duck",
+            "price": 250,
+            "stockQuantity": 15,
+            "description": "Farm-raised duck, ready to cook."
+        },
+        {
+            "id": 8,
+            "imageUrl": null,
+            "name": "Goose",
+            "price": 350,
+            "stockQuantity": 8,
+            "description": "Premium goose, ideal for roasting."
+        },
+        {
+            "id": 9,
+            "imageUrl": null,
+            "name": "Quail Eggs",
+            "price": 90,
+            "stockQuantity": 60,
+            "description": "Dozen quail eggs, small and nutritious."
+        },
+        {
+            "id": 10,
+            "imageUrl": null,
+            "name": "Turkey Breast",
+            "price": 220,
+            "stockQuantity": 12,
+            "description": "Boneless turkey breast, lean and flavorful."
+        },
+        {
+            "id": 11,
+            "imageUrl": null,
+            "name": "Chicken Thighs",
+            "price": 130,
+            "stockQuantity": 35,
+            "description": "Juicy chicken thighs, great for grilling or roasting."
+        },
+        {
+            "id": 12,
+            "imageUrl": null,
+            "name": "Organic Eggs",
+            "price": 100,
+            "stockQuantity": 50,
+            "description": "Organic eggs from free-range hens."
+        },
+        {
+            "id": 13,
+            "imageUrl": null,
+            "name": "Peking Duck",
+            "price": 400,
+            "stockQuantity": 5,
+            "description": "Specialty Peking duck, ready for a gourmet meal."
+        },
+        {
+            "id": 14,
+            "imageUrl": null,
+            "name": "Cornish Hen",
+            "price": 170,
+            "stockQuantity": 18,
+            "description": "Tender Cornish hen, perfect for individual servings."
+        },
+        {
+            "id": 15,
+            "imageUrl": null,
+            "name": "Duck Eggs",
+            "price": 120,
+            "stockQuantity": 30,
+            "description": "Rich and flavorful duck eggs, perfect for baking."
+        },
+        {
+            "id": 16,
+            "imageUrl": null,
+            "name": "Turkey Legs",
+            "price": 160,
+            "stockQuantity": 20,
+            "description": "Large turkey legs, perfect for grilling or roasting."
+        },
+        {
+            "id": 17,
+            "imageUrl": null,
+            "name": "Chicken Drumsticks",
+            "price": 110,
+            "stockQuantity": 45,
+            "description": "Tender chicken drumsticks, great for frying."
+        },
+        {
+            "id": 18,
+            "imageUrl": null,
+            "name": "Whole Roasting Chicken",
+            "price": 200,
+            "stockQuantity": 20,
+            "description": "Whole roasting chicken, ideal for family dinners."
+        },
+        {
+            "id": 19,
+            "imageUrl": null,
+            "name": "Guinea Fowl",
+            "price": 250,
+            "stockQuantity": 10,
+            "description": "Exotic guinea fowl, raised on a natural diet."
+        },
+        {
+            "id": 20,
+            "imageUrl": null,
+            "name": "Frozen Chicken Parts",
+            "price": 140,
+            "stockQuantity": 50,
+            "description": "Assorted frozen chicken parts, convenient for cooking."
+        }
+    ]
+}

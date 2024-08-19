@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
 
-
 const LandingPage = () => {
   return (
     <>
@@ -18,3 +17,6 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
+
+

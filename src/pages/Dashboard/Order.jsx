@@ -7,49 +7,49 @@ const OrderPage = () => {
   const [cart, setCart] = useState([]);
 
   // Fetch products when the component loads
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get("/api/products"); // Replace with your API endpoint
-        setProducts(response.data);
-      } catch (error) {
-        console.error("Error fetching products", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     try {
+  //       const response = await axios.get("/api/products"); // Replace with your API endpoint
+  //       setProducts(response.data);
+  //     } catch (error) {
+  //       console.error("Error fetching products", error);
+  //     }
+  //   };
 
-    fetchProducts();
-  }, []);
+  //   fetchProducts();
+  // }, []);
 
   // Handle adding a product to the cart
-  const handleAddToCart = (product) => {
-    setCart((prevCart) => {
-      const existingProduct = prevCart.find((item) => item.id === product.id);
+  // const handleAddToCart = (product) => {
+  //   setCart((prevCart) => {
+  //     const existingProduct = prevCart.find((item) => item.id === product.id);
 
-      if (existingProduct) {
-        return prevCart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      }
+  //     if (existingProduct) {
+  //       return prevCart.map((item) =>
+  //         item.id === product.id
+  //           ? { ...item, quantity: item.quantity + 1 }
+  //           : item
+  //       );
+  //     }
 
-      return [...prevCart, { ...product, quantity: 1 }];
-    });
-  };
+  //     return [...prevCart, { ...product, quantity: 1 }];
+  //   });
+  // };
 
   // Calculate total price
-  const calculateTotal = () => {
-    return cart.reduce(
-      (total, product) => total + product.price * product.quantity,
-      0
-    );
-  };
+  // const calculateTotal = () => {
+  //   return cart.reduce(
+  //     (total, product) => total + product.price * product.quantity,
+  //     0
+  //   );
+  // };
 
-  // Handle checkout process (to be further developed)
-  const handleCheckout = () => {
-    // Redirect to payment page or process order
-    alert("Proceed to checkout!");
-  };
+  // // Handle checkout process (to be further developed)
+  // const handleCheckout = () => {
+  //   // Redirect to payment page or process order
+  //   alert("Proceed to checkout!");
+  // };
 
   return (
     <div className="p-8">

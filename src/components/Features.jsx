@@ -1,4 +1,5 @@
 import { ShieldCheck, ShoppingCart, Truck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -22,13 +23,20 @@ const FeaturesSection = () => {
   return (
     <section id="features" className="py-20 bg-white">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-semibold text-[#2C3E50]">Why Shop With Us?</h2>
+        <h2 className="text-3xl font-semibold text-[#2C3E50]">
+          Why Shop With Us?
+        </h2>
         <div className="flex flex-col md:flex-row mt-10 space-y-10 md:space-y-0 md:space-x-10 justify-center items-center">
           {features.map((feature, index) => (
-            <div key={index} className="text-center max-w-xs">
+            <div
+              key={index}
+              className="flex flex-col items-center text-center max-w-xs"
+            >
               <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-[#34495E]">{feature.title}</h3>
-              <p className="text-[#7F8C8D]">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-[#34495E] mt-2">
+                {feature.title}
+              </h3>
+              <p className="text-[#7F8C8D] mt-1">{feature.description}</p>
             </div>
           ))}
         </div>

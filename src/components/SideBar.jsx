@@ -4,7 +4,7 @@ import { Home, FilePlus, List, CreditCard, Settings, Info, HelpCircle, LogOut } 
 
 const SideBar = () => {
   return (
-    <div className="w-[240px] bg-[#2C3E50] text-white rounded-br-xl p-5 flex flex-col h-full">
+    <div className="w-[240px] bg-[#2C3E50] text-white rounded-br-xl p-5 flex flex-col h-full fixed">
       <div>
         <div className="mb-12 mt-8">
           <h1 className="text-xl font-semibold">Menu</h1>
@@ -31,9 +31,9 @@ const SideBar = () => {
             <Settings className="mr-2 h-[20px] w-[20px]" />
             <span className="text-sm">Settings</span>
           </Link>
-          <Link to="/info" className="flex items-center p-3 hover:bg-[#F39C12] rounded-md">
+          <Link to="/sme-support" className="flex items-center p-3 hover:bg-[#F39C12] rounded-md">
             <Info className="mr-2 h-[20px] w-[20px]" />
-            <span className="text-sm">Info</span>
+            <span className="text-sm">SMEs Support</span>
           </Link>
           <Link to="/help" className="flex items-center p-3 hover:bg-[#F39C12] rounded-md">
             <HelpCircle className="mr-2 h-[20px] w-[20px]" />
