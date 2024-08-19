@@ -6,7 +6,7 @@ import { Outlet } from "react-router-dom";
 const Dashboard = () => {
   return (
     <div className="flex">
-      <SideBar />
+      {/* <SideBar /> */}
       <div className="flex-grow flex flex-col">
         <Topbar />
         <Outlet/>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../../assets/api.json";
 import { Heart, ShoppingCart, Star } from "lucide-react";
+import ConsumerSideBar from "../../components/ConsumerSideBar";
 
 const ConsumerDashboard = () => {
   const [products, setProducts] = useState([]);
@@ -20,20 +21,9 @@ const ConsumerDashboard = () => {
   };
 
   return (
+    <>
+    <ConsumerSideBar/>
     <div className="bg-background text-textPrimary min-h-screen flex flex-col items-center mt-[80px] ms-[240px]">
-      <header className="flex justify-between items-center py-6 px-10 bg-primary text-white w-full">
-        <div className="text-2xl font-heading">Poultry Bazaar</div>
-        <nav>
-          <ul className="flex space-x-6">
-            <li>
-              <button onClick={() => navigate("/profile")}>Profile</button>
-            </li>
-            <li>
-              <button onClick={() => navigate("/orders")}>My Orders</button>
-            </li>
-          </ul>
-        </nav>
-      </header>
 
       <div className="mt-10 w-full max-w-6xl">
         <h2 className="text-3xl font-heading text-center mb-6">
@@ -79,6 +69,7 @@ const ConsumerDashboard = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

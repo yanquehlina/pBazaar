@@ -7,6 +7,8 @@ import API from "../../assets/api.json"
 import Product from '../../components/Product';
 import EditProductModal from '../ProductMgtFarmer/EditProduct';
 import DeleteConfirmationModal from '../../components/DeleteConfirmationModal';
+import SideBar from '../../components/SideBar';
+import FarmerSideBar from '../../components/FarmerSideBar';
 
 const FarmerDashboard = () => {
   const [products, setProducts] = useState([]);
@@ -124,17 +126,9 @@ const FarmerDashboard = () => {
   }
 
   return (
+    <>
+    <FarmerSideBar/>
     <div className="bg-background text-textPrimary min-h-screen flex flex-col items-center mt-[80px] ms-[240px]">
-      <header className="flex justify-between items-center py-6 px-10 bg-primary text-white w-full">
-        <div className="text-2xl font-heading">Poultry Bazaar</div>
-        <nav>
-          <ul className="flex space-x-6">
-            <li><button onClick={() => navigate('/profile')}>Profile</button></li>
-            <li><button onClick={() => navigate('/orders')}>Manage Orders</button></li>
-          </ul>
-        </nav>
-      </header>
-
       <AddProduct isOpen={addProductModalOpen} onClose={() => setAddProductModalOpen(false)} handleSubmit={handleAddProduct}/>
       <EditProductModal isOpen={editProductModalOpen} onClose={() => setEditProductModalOpen(false)} />
       <DeleteConfirmationModal isOpen={deleteProductModalOpen} onClose={() => setDeleteProductModalOpen(false)} onConfirm={handleDeleteProduct}/>
@@ -240,6 +234,7 @@ const FarmerDashboard = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

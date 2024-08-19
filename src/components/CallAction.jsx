@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
+import HeroBg from "../assets/images/bg.jpg"
 
 const CTASection = () => {
   return (
-    <section id="cta" className="py-20 bg-[#F39C12] text-white text-center">
+    <>
+         <img src={HeroBg} alt="Login Background" className="fixed w-full h-full -z-40" />
+         <div className="fixed w-full h-full -z-10 bg-[#2C3E50] opacity-80"></div>
+    <section id="cta" className="py-20  text-white text-center ">
       <div className="container mx-auto">
         <h2 className="text-3xl font-semibold">Join Us Today</h2>
         <p className="mt-4 text-lg">
@@ -15,6 +19,7 @@ const CTASection = () => {
         </Link>
       </div>
     </section>
+    </>
   );
 };
 

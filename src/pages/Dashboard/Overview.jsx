@@ -76,7 +76,7 @@ const Overview = () => {
           <SideBar />
           <div className="flex-grow flex flex-col">
             <Topbar />
-          <div className="p-10 flex flex-col gap-y-10">
+          <div className="p-10 flex flex-col gap-y-10 ms-[240px]">
             <Link
               to={getPreviewLink()}
               className="bg-coralRed text-white ml-auto px-6 py-3 rounded-lg"

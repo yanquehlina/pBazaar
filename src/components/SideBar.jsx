@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Home, FilePlus, List, CreditCard, Settings, Info, HelpCircle, LogOut } from 'lucide-react';
 
 const SideBar = () => {
+  const role = localStorage.getItem("role");
   return (
     <div className="w-[240px] bg-[#2C3E50] text-white rounded-br-xl p-5 flex flex-col h-full fixed">
       <div>
@@ -16,10 +17,10 @@ const SideBar = () => {
             <FilePlus className="mr-2 h-[20px] w-[20px]" />
             <span className="text-sm">Create Request</span>
           </Link>
-          <Link to="/order" className="flex items-center p-3 hover:bg-[#F39C12] rounded-md">
+        {role === "farmer" &&  <Link to="/order" className="flex items-center p-3 hover:bg-[#F39C12] rounded-md">
             <List className="mr-2 h-[20px] w-[20px]" />
             <span className="text-sm">Orders</span>
-          </Link>
+          </Link>}
           <Link to="/all-payments" className="flex items-center p-3 hover:bg-[#F39C12] rounded-md">
             <CreditCard className="mr-2 h-[20px] w-[20px]" />
             <span className="text-sm">All Payments</span>

@@ -2,15 +2,15 @@
     "products": [
         {
             "id": 1,
-            "imageUrl": "./images/pbazaar-egg.png",
-            "name": "Brown Egg",
+            "imageUrl": "/images/pbazaar-egg.png",
+            "name": "White Egg",
             "price": 80,
             "stockQuantity": 50,
             "description": "Fresh brown eggs, organic and farm-raised."
         },
         {
             "id": 2,
-            "imageUrl": null,
+            "imageUrl": "/images/broiler-chicken.jpg",
             "name": "Broiler Chicken",
             "price": 150,
             "stockQuantity": 30,
@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "imageUrl": null,
+            "imageUrl": "/images/free-ranging-chickens.jpg",
             "name": "Free-Range Chicken",
             "price": 200,
             "stockQuantity": 20,
@@ -26,7 +26,7 @@
         },
         {
             "id": 4,
-            "imageUrl": null,
+            "imageUrl": "/images/wings.jpg",
             "name": "Chicken Wings",
             "price": 100,
             "stockQuantity": 40,
@@ -34,7 +34,7 @@
         },
         {
             "id": 5,
-            "imageUrl": null,
+            "imageUrl": "/images/chicken-breast.png",
             "name": "Chicken Breast",
             "price": 180,
             "stockQuantity": 25,

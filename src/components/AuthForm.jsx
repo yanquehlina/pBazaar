@@ -27,14 +27,12 @@ const AuthForm = ({ isSignup }) => {
   return (
     <div className="flex-1 flex flex-col justify-center p-8">
       <div className="text-center mb-8">
-        <h1 className="text-3xl md:text-5xl font-semibold text-[#E74C3C] pb-2" style={{ fontFamily: 'Montserrat' }}>
+        <h1 className="text-3xl md:text-5xl font-semibold text-secondary pb-2" style={{ fontFamily: 'Montserrat' }}>
           {isSignup ? 'Tell us about yourself' : 'Welcome back!'}
         </h1>
-        <div className="h-0.5 w-1/3 mx-auto bg-[#ECF0F1]"></div>
-        <h2 className="text-2xl md:text-4xl font-semibold pb-4 pt-4" style={{ fontFamily: 'Montserrat' }}>
+        <h2 className="text-2xl md:text-4xl font-semibold pb-4 pt-4 text-background" style={{ fontFamily: 'Montserrat' }}>
           {isSignup ? 'Personal Information' : 'Your Credentials'}
         </h2>
-        <div className="h-0.5 w-1/2 mx-auto bg-[#ECF0F1]"></div>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 max-w-lg mx-auto w-full px-4">

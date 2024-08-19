@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
+import HeroBg from "../assets/images/bg.jpg"
+import HeroSideImage from "../assets/images/hero-bg.jpg"
 
 const HeroSection = () => {
   return (
     <>
-    <section className="bg-[#ECF0F1] text-center py-20">
+     <img src={HeroBg} alt="Login Background" className="fixed w-full h-full -z-40" />
+     <div className="fixed w-full h-full -z-10 bg-[#2C3E50] opacity-80"></div>
+    <section className="bg-[#ECF0F1] text-center py-20 flex items-center px-24">
+      <div>
+        <img src={HeroSideImage} alt="Hero Image" className="rounded-full h-80"/>
+      </div>
       <div className="container mx-auto">
         <h1 className="text-4xl md:text-6xl font-bold text-[#2C3E50]">
           Welcome to P-Bazaar
