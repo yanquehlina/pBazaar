@@ -42,7 +42,7 @@
         },
         {
             "id": 6,
-            "imageUrl": null,
+            "imageUrl": "/images/whole-turkey.jpg",
             "name": "Whole Turkey",
             "price": 300,
             "stockQuantity": 10,
@@ -50,7 +50,7 @@
         },
         {
             "id": 7,
-            "imageUrl": null,
+            "imageUrl": "/images/duck.jpg",
             "name": "Duck",
             "price": 250,
             "stockQuantity": 15,
